@@ -2,11 +2,14 @@
   <header>
       <!-- <div class="test">div</div> -->
     <div class="wrap">
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="../assets/images/dc-logo.png" alt="logo dc header">
+        </div>
         <ul>
-            <li>Item1</li>
+            <!-- <li>Item1</li>
             <li>Item2</li>
-            <li>Item3</li>
+            <li>Item3</li> -->
+            <li v-for="(link,index) in links" :key=index :class="{'underline' : link.active}"> <a :href="link.url" @click="attiva(link,index)">{{link.text}}</a> </li>
         </ul>
     </div>
   </header>
@@ -14,29 +17,89 @@
 
 <script>
 export default {
-    name:"Header"
+    name:"Header",
+    data() {
+        return {
+           links:[
+               {
+                   text: "Item1",
+                   url : "#",
+                   active: false
+               },
+               {
+                    text: "Item1",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "Item1",
+                    url : "#",
+                    active: false
+               }
+           ] 
+        }
+    },
+    methods:{
+        attiva(link,index){
+            console.log(this.links);
+            this.links.forEach((element,i) =>{
+                if(index == i){
+                    element.active = !element.active
+                }
+                else{
+                    element.active = false
+                }
+            })
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
     header{
-        height: 70px;
+        min-height: 70px;
 
         .wrap{
             background-color: lightblue;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-around;
             .logo{
-                width: 50px;
-                height: 100%;
-                background-color: lightseagreen;
+                margin: 20px 0px;
+                img{
+                    height: 70px
+                };
             }
-            li{
-                display: inline-block;
-                padding: 0px 10px;
+            ul{
+                padding-top: 20px;
+
+                li{
+                    display: inline-block;
+                    margin: 0px 10px;
+                    padding-bottom: 20px;
+                    position: relative;
+                   
+                }
+            
             }
+            
         }
     }
+    .underline::after{
+       display: block;
+       content: '';
+       height: 5px;
+       background-color: blue;
+       width: 100%;
+       position: absolute;
+       bottom: 0;
+    }
+    // li:after{
+    //     content: '';
+    //     height: 5px;
+    //     color: blue;
+    //     width: 10px;
+    //     position: absolute;
+    //     bottom: 0;
+    // }
 </style>
