@@ -9,7 +9,7 @@
             <!-- <li>Item1</li>
             <li>Item2</li>
             <li>Item3</li> -->
-            <li v-for="(link,index) in links" :key=index :class="{'underline' : link.active}"> <a :href="link.url" @click="attiva(link,index)">{{link.text}}</a> </li>
+            <li v-for="(link,index) in links" :key=index :class="{'underline' : link.active}"> <a :href="link.url" @click="attiva(link,index)" :class="{'colored' : link.active}">{{link.text}}</a> </li>
         </ul>
     </div>
   </header>
@@ -93,6 +93,9 @@ export default {
        width: 100%;
        position: absolute;
        bottom: 0;
+    }
+    .colored{
+        color: blue;
     }
     // li:after{
     //     content: '';
