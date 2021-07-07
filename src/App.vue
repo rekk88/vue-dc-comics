@@ -3,10 +3,11 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Header />
-    <!-- <main>
-      <Jumbotron />
+    <main>
+      <Content />
+      <Links />
     </main>
-    <Footer /> -->
+    <!-- <Footer /> -->
   
   </div>
 </template>
@@ -14,18 +15,23 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
+import Content from './components/Content.vue'
+import Links from './components/Links.vue'
+
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    Header
+    Header,
+    Content,
+    Links
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -6,10 +6,7 @@
             <img src="../assets/images/dc-logo.png" alt="logo dc header">
         </div>
         <ul>
-            <!-- <li>Item1</li>
-            <li>Item2</li>
-            <li>Item3</li> -->
-            <li v-for="(link,index) in links" :key=index :class="{'underline' : link.active}"> <a :href="link.url" @click="attiva(link,index)" :class="{'colored' : link.active}">{{link.text}}</a> </li>
+            <li v-for="(link,index) in links" :key=index :class="{'underline' : link.active}"> <a :href="link.url" @click="attiva(index)" :class="{'colored' : link.active}">{{link.text}}</a> </li>
         </ul>
     </div>
   </header>
@@ -22,25 +19,60 @@ export default {
         return {
            links:[
                {
-                   text: "Item1",
+                   text: "Characters",
                    url : "#",
                    active: false
                },
                {
-                    text: "Item1",
+                    text: "Comics",
+                    url : "#",
+                    active: true
+               },
+               {
+                    text: "Movies",
                     url : "#",
                     active: false
                },
                {
-                    text: "Item1",
+                    text: "Tv",
                     url : "#",
                     active: false
-               }
+               },
+               {
+                    text: "Games",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "Collectibles",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "Videos",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "Fans",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "News",
+                    url : "#",
+                    active: false
+               },
+               {
+                    text: "Shop",
+                    url : "#",
+                    active: false
+               },
            ] 
         }
     },
     methods:{
-        attiva(link,index){
+        attiva(index){
             console.log(this.links);
             this.links.forEach((element,i) =>{
                 if(index == i){
@@ -56,27 +88,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
     header{
         min-height: 70px;
-
+        font-weight: bold;
+        font-size: 18px;
+        background-color: white;
+        margin-top: 40px;
         .wrap{
-            background-color: lightblue;
+            width: 90%;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             .logo{
                 margin: 20px 0px;
                 img{
-                    height: 70px
+                    height: 80px
                 };
             }
             ul{
-                padding-top: 20px;
+                padding-top: 52px;
+                text-transform: uppercase;
 
                 li{
                     display: inline-block;
-                    margin: 0px 10px;
-                    padding-bottom: 20px;
+                    margin: 0px 20px;
+                    padding-bottom: 52px;
                     position: relative;
                    
                 }
@@ -89,13 +127,13 @@ export default {
        display: block;
        content: '';
        height: 5px;
-       background-color: blue;
+       background-color: $my_blue;
        width: 100%;
        position: absolute;
        bottom: 0;
     }
     .colored{
-        color: blue;
+        color: $my_blue;
     }
     // li:after{
     //     content: '';
