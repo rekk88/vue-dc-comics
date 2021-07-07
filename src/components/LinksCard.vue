@@ -2,6 +2,7 @@
   <div class="wrap">
       <!-- <div>{{pippo.src}} -  {{pippo.descrizione}}</div> -->
       <img :src="pippo.src" :alt="pippo.descrizione">
+      <span>{{pippo.descrizione}}</span>
   </div>
 </template>
 
@@ -13,5 +14,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .wrap{
+        margin: 0px 30px;
+        img{
+            vertical-align: middle;
+            height: 70px;
+            padding: 5px;
+        }
+        span{
+            text-transform: uppercase;
+            color: white;
+            margin-left: 5px;
+        }
+    }
+    
 </style>
