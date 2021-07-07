@@ -1,11 +1,11 @@
 export default [
     {
-        src : "sono un src",
-        descrizione:"ciao volevi un src  ? "
+        src : "./assets/images/buy-comics-digital-comics.png",
+        descrizione:"digital comics"
     },
     // {
-    //     src : "",
-    //     descrizione:""
+    //     src : "cazzabubboli",
+    //     descrizione:"non so cosa siano"
     // },
     // {
     //     src : "",

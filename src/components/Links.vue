@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
       <div class="content">
-          <LinksCard :pippo="shopLinks"/>
+          <LinksCard v-for="(item,index) in shopLinks" :key="index" :pippo="item"/>
       </div>
   </div>
 </template>

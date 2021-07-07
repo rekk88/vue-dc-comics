@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
-      <div>{{pippo[0].src}} </div>
-      <!-- <img :src="pippo.src" :alt="pippo.descrizione"> -->
+      <!-- <div>{{pippo.src}} -  {{pippo.descrizione}}</div> -->
+      <img :src="pippo.src" :alt="pippo.descrizione">
   </div>
 </template>
 
