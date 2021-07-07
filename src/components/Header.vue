@@ -118,7 +118,7 @@ export default {
                     position: relative;
                     a:hover{
                      color: $my_blue;
-                    }  
+                    } 
                 }
             
             }
@@ -137,12 +137,4 @@ export default {
     .colored{
         color: $my_blue;
     }
-    // li:after{
-    //     content: '';
-    //     height: 5px;
-    //     color: blue;
-    //     width: 10px;
-    //     position: absolute;
-    //     bottom: 0;
-    // }
 </style>

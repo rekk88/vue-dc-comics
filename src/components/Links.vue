@@ -1,14 +1,24 @@
 <template>
   <div class="wrap">
       <div class="content">
-
+          <LinksCard :pippo="shopLinks"/>
       </div>
   </div>
 </template>
 
 <script>
+import Cards from '../data/Cards.js'
+import LinksCard from './LinksCard.vue'
 export default {
-    name:"Links"
+    name:"Links",
+    components:{
+        LinksCard
+    },
+    data() {
+        return {
+            shopLinks: Cards      
+        }
+    },
 }
 </script>
 
@@ -19,8 +29,10 @@ export default {
     .content{
         width: 90%;
         margin: 0px auto;
-
+        /*debug */
         height: 200px;
+        display: flex;
+        align-items: center;
     }
 }
 
