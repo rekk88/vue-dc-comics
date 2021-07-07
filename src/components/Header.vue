@@ -116,7 +116,9 @@ export default {
                     margin: 0px 20px;
                     padding-bottom: 52px;
                     position: relative;
-                   
+                    a:hover{
+                     color: $my_blue;
+                    }  
                 }
             
             }
