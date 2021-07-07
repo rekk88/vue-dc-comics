@@ -29,8 +29,7 @@ export default {
     .content{
         width: 90%;
         margin: 0px auto;
-        /*debug */
-        height: 200px;
+        padding: 40px 0;
         display: flex;
         align-items: center;
         justify-content: center;
