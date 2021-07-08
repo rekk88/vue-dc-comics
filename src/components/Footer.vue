@@ -33,6 +33,7 @@ export default {
         .bottom{
             // height: 100px;
             width: 100%;
+            height: calc(100vh - 807px); //un pò spartana come soluzione ma ho esaurito le opzioni
             background-color: lightblue;
         }
     }
