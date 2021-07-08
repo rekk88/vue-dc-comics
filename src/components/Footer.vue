@@ -51,7 +51,18 @@
         
       </div>
       <div class="bottom">
-           un div 
+            <span class="sign_up">sign-up now!</span>
+            <div>
+                <span>
+                    follow us
+                    <img src="../assets/images/footer-facebook.png" alt="">
+                    <img src="../assets/images/footer-facebook.png" alt="">
+                    <img src="../assets/images/footer-facebook.png" alt="">
+                    <img src="../assets/images/footer-facebook.png" alt="">
+                    <img src="../assets/images/footer-facebook.png" alt="">
+
+                </span>
+            </div>
       </div>
   </div>
 </template>
@@ -65,11 +76,12 @@ export default {
 </script>
  
 <style lang="scss" scoped>
+@import '../style/variable.scss';
+
     .footer_wrap{
         // display: flex;
-        // flex-wrap: wrap;
-        // flex-grow: 1;
         text-align: left;
+        
         .top{
             // height: 390px; /*altezza da togliere*/
             width: 100%;
@@ -106,10 +118,35 @@ export default {
         }
         .bottom{
             // height: 100px;
-            width: 100%;
             //127+41+100+150+390 somma altezze
+            width: 90%;
             height: calc(100vh - 788px); //un pò spartana come soluzione ma ho esaurito le opzioni
-            background-color: lightblue;
+            // background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+
+            span.sign_up{
+                display: inline-block;
+                border: 3px solid $my_blue;
+                padding: 7px;
+                font-size: 17px;
+                text-transform: uppercase;
+            }
+            div{
+                display: inline-block;
+                span{
+                    font-size: 19px;
+                    text-transform: uppercase;
+                    color: $my_blue;
+                    font-weight: bold;
+                    img{
+                        vertical-align: middle;
+                        margin:0px 5px;
+                    };
+                }
+            }
         }
     }
 </style>
