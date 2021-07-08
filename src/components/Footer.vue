@@ -111,9 +111,7 @@ export default {
                  .left ul li h2{
                      color: white;
                 }
-                .right{
-
-                }
+              
             }
         }
         .bottom{
